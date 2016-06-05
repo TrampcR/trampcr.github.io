@@ -4,21 +4,52 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>解决AndroidStudio读取中文文件路径时的乱码问题 | trampcr</title>
+  <title>如何把文件夹中文件的文件名导入excel表格或txt文本 | trampcr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模">
+  <meta name="description" content="再简单的知识都需要记录，因为好记性不如烂笔头。
+
+把文件夹中文件的文件名导入excel表格或txt文本有两种方法：
+
+命令行输入相应的命令
+人生苦短，我用Python
+
+接下来详细说一下这两种方法
+1.命令行在命令行中输入相应的命令也有两种形式，如下：
+
+dir [文件夹路径] /b &amp;gt; [excel表格或txt文本想保存的路径\excel表格或txt文本文件名]（这种形式不需要进入目标文">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决AndroidStudio读取中文文件路径时的乱码问题">
-<meta property="og:url" content="http://www.trampcr.com/2016/05/18/AndroidStudio中文文件路径框框问题/index.html">
+<meta property="og:title" content="如何把文件夹中文件的文件名导入excel表格或txt文本">
+<meta property="og:url" content="http://www.trampcr.com/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/index.html">
 <meta property="og:site_name" content="trampcr">
-<meta property="og:description" content="其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模">
-<meta property="og:image" content="http://7xslff.com1.z0.glb.clouddn.com/Open_File.png">
-<meta property="og:image" content="http://7xslff.com1.z0.glb.clouddn.com/AS_appearance_default_fonts.png">
-<meta property="og:updated_time" content="2016-05-18T05:34:04.148Z">
+<meta property="og:description" content="再简单的知识都需要记录，因为好记性不如烂笔头。
+
+把文件夹中文件的文件名导入excel表格或txt文本有两种方法：
+
+命令行输入相应的命令
+人生苦短，我用Python
+
+接下来详细说一下这两种方法
+1.命令行在命令行中输入相应的命令也有两种形式，如下：
+
+dir [文件夹路径] /b &amp;gt; [excel表格或txt文本想保存的路径\excel表格或txt文本文件名]（这种形式不需要进入目标文">
+<meta property="og:image" content="http://7xslff.com1.z0.glb.clouddn.com/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%BD%A2%E5%BC%8F.png">
+<meta property="og:image" content="http://7xslff.com1.z0.glb.clouddn.com/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%AC%E4%BA%8C%E7%A7%8D%E5%BD%A2%E5%BC%8F.png">
+<meta property="og:image" content="http://7xslff.com1.z0.glb.clouddn.com/excelAndtxt.png">
+<meta property="og:updated_time" content="2016-06-05T23:41:33.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决AndroidStudio读取中文文件路径时的乱码问题">
-<meta name="twitter:description" content="其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模">
-<meta name="twitter:image" content="http://7xslff.com1.z0.glb.clouddn.com/Open_File.png">
+<meta name="twitter:title" content="如何把文件夹中文件的文件名导入excel表格或txt文本">
+<meta name="twitter:description" content="再简单的知识都需要记录，因为好记性不如烂笔头。
+
+把文件夹中文件的文件名导入excel表格或txt文本有两种方法：
+
+命令行输入相应的命令
+人生苦短，我用Python
+
+接下来详细说一下这两种方法
+1.命令行在命令行中输入相应的命令也有两种形式，如下：
+
+dir [文件夹路径] /b &amp;gt; [excel表格或txt文本想保存的路径\excel表格或txt文本文件名]（这种形式不需要进入目标文">
+<meta name="twitter:image" content="http://7xslff.com1.z0.glb.clouddn.com/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%BD%A2%E5%BC%8F.png">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -198,11 +229,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-AndroidStudio中文文件路径框框问题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-将文件夹中的文件名导入excel表格或txt文本" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/18/AndroidStudio中文文件路径框框问题/" class="article-date">
-  	<time datetime="2016-05-18T05:25:05.638Z" itemprop="datePublished">2016-05-18</time>
+      <a href="/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/" class="article-date">
+  	<time datetime="2016-06-05T14:43:33.162Z" itemprop="datePublished">2016-06-05</time>
 </a>
     </div>
   
@@ -215,7 +246,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      解决AndroidStudio读取中文文件路径时的乱码问题
+      如何把文件夹中文件的文件名导入excel表格或txt文本
     </h1>
   
 
@@ -232,22 +263,28 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模一样的问题，但是没人回答，最后在CSDN上找到了答案。</p>
+<p>再简单的知识都需要记录，因为好记性不如烂笔头。</p>
 </blockquote>
-<h3 id="AndroidStudio读取中文文件路径时的乱码问题"><a href="#AndroidStudio读取中文文件路径时的乱码问题" class="headerlink" title="AndroidStudio读取中文文件路径时的乱码问题"></a>AndroidStudio读取中文文件路径时的乱码问题</h3><p>直接上图：</p>
-<p><img src="http://7xslff.com1.z0.glb.clouddn.com/Open_File.png" alt=""></p>
-<p>图中的360口口口口口本来应该是360安全浏览器下载。这个还可以忍受，大不了去原文件目录看一下，但是装了翻译插件后，翻译出来的是一堆口，就没办法忍了。</p>
-<p>先说一下导致这个问题的原因：AndroidStudio中有两类字体，一类是AndroidStudio UI，即AndroidStudio界面上的所有文字的字体，例如工具栏上文字的字体；另一类是代码的字体。AndroidStudio读取中文文件路径时出现乱码，或者翻译出现乱码，这都是和AndroidStudio界面相关的，与程序代码并没有关系，需要修改AndroidStudio UI字体为支持中文的字体。我之前用的是Lucida Console，改为Arial Unicode MS或者其他支持中文的字体即可。</p>
-<p><strong>解决办法：</strong></p>
-<p>在Settings-&gt;Appearance-&gt;UI options-&gt;Override default fonts by下的Name中将Lucida Console改为Arial Unicode MS。如下图：</p>
-<p><img src="http://7xslff.com1.z0.glb.clouddn.com/AS_appearance_default_fonts.png" alt=""></p>
-<hr>
-<blockquote>
-<p>问题解决完了，再推荐一下引起我解决这个问题的翻译插件，尤其是对于阅读源码的同学来说，遇到不懂的单词，避免了先复制再切换到字典进行翻译，方便快捷。</p>
-</blockquote>
-<p>AndroidStudio翻译插件地址：<a href="https://github.com/Skykai521/ECTranslation" target="_blank" rel="external">https://github.com/Skykai521/ECTranslation</a></p>
-<p><strong>具体使用方法，看作者README</strong></p>
-<p>参考文章：<a href="http://blog.csdn.net/whuancai/article/details/8935519" target="_blank" rel="external">Android Studio设置主题和不支持中文的问题解决方法</a></p>
+<p>把文件夹中文件的文件名导入excel表格或txt文本有两种方法：</p>
+<ul>
+<li>命令行输入相应的命令</li>
+<li>人生苦短，我用Python</li>
+</ul>
+<p>接下来详细说一下这两种方法</p>
+<h3 id="1-命令行"><a href="#1-命令行" class="headerlink" title="1.命令行"></a>1.命令行</h3><p>在命令行中输入相应的命令也有两种形式，如下：</p>
+<ul>
+<li>dir [文件夹路径] /b &gt; [excel表格或txt文本想保存的路径\excel表格或txt文本文件名]（这种形式不需要进入目标文件夹下）</li>
+<li>dir /b &gt; [excel表格或txt文本想保存的路径\excel表格或txt文本文件名]（这种形式有一个前提，需要先进入目标文件夹下）</li>
+</ul>
+<p>有点抽象，看图：</p>
+<p><img src="http://7xslff.com1.z0.glb.clouddn.com/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%BD%A2%E5%BC%8F.png" alt=""></p>
+<p><img src="http://7xslff.com1.z0.glb.clouddn.com/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%AC%E4%BA%8C%E7%A7%8D%E5%BD%A2%E5%BC%8F.png" alt=""></p>
+<p>以上两种形式任选一种即可，进入目标文件夹，可以看到相应的excel表格和txt文本已经生成了，如下：</p>
+<p><img src="http://7xslff.com1.z0.glb.clouddn.com/excelAndtxt.png" alt=""></p>
+<h3 id="2-Python脚本"><a href="#2-Python脚本" class="headerlink" title="2.Python脚本"></a>2.Python脚本</h3><p>Python对于处理文本来说，很简单的代码就可以搞定。</p>
+<p>代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os,sys</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">listdir</span><span class="params">(dir,file)</span>:</span></span><br><span class="line">    fielnum = <span class="number">0</span>  <span class="comment">#统计文件的个数，如果需要的话，在后边可以打印出来</span></span><br><span class="line">    list = os.listdir(dir)  <span class="comment">#列出目录下的所有文件和目录</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> list:</span><br><span class="line">        filepath = os.path.join(dir,line)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(filepath):  <span class="comment">#如果filepath是目录，则再列出该目录下的所有文件</span></span><br><span class="line">            myfile.write(<span class="string">'   '</span> + line + <span class="string">'//'</span>+<span class="string">'\n'</span>)</span><br><span class="line">            <span class="keyword">for</span> li <span class="keyword">in</span> os.listdir(filepath):</span><br><span class="line">                myfile.write(<span class="string">'     '</span>+li + <span class="string">'\n'</span>)</span><br><span class="line">                fielnum = fielnum + <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> os.path:   <span class="comment">#如果filepath是文件，直接列出文件名</span></span><br><span class="line">            myfile.write(line + <span class="string">'\n'</span>)</span><br><span class="line">            fielnum = fielnum + <span class="number">1</span></span><br><span class="line">dir = raw_input(<span class="string">'please input the path:'</span>)</span><br><span class="line">myfile = open(<span class="string">'list.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">listdir(dir,myfile)</span><br><span class="line">myfile.close()</span><br></pre></td></tr></table></figure>
+<p>这里输入目标文件夹，即可将目标文件夹中的文件名写入list.txt中，如果想保存为excel表格形式，将list.txt改为list.xls。</p>
 
       
     </div>
@@ -257,18 +294,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          如何把文件夹中文件的文件名导入excel表格或txt文本
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/16/Android备份短信/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android短信备份</div>
+    <a href="/2016/05/18/AndroidStudio中文文件路径框框问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">解决AndroidStudio读取中文文件路径时的乱码问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -303,7 +331,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="AndroidStudio中文文件路径框框问题" data-title="解决AndroidStudio读取中文文件路径时的乱码问题" data-url="http://www.trampcr.com/2016/05/18/AndroidStudio中文文件路径框框问题/"></div>
+	<div class="ds-thread" data-thread-key="将文件夹中的文件名导入excel表格或txt文本" data-title="如何把文件夹中文件的文件名导入excel表格或txt文本" data-url="http://www.trampcr.com/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
