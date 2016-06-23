@@ -4,21 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>解决AndroidStudio读取中文文件路径时的乱码问题 | trampcr</title>
+  <title>反转句子中单词的顺序，不改变单词内字符的顺序 | trampcr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模">
+  <meta name="description" content="题目：输入一个英文句子，反转句子中单词的顺序，但单词内字符的顺序不变。句子中单词以空格隔开，为简单起见，标点符号和普通字母一样处理。
+输入：”I am a student.”
+输出：”student. a am I”
+
+思路：先反转整个句子中的所有字符，再反转每个单词中的字符。以上面的输入为例：先将”I am a student.”中所有字符反转，成为”.tneduts a ma I”，再将”.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决AndroidStudio读取中文文件路径时的乱码问题">
-<meta property="og:url" content="http://www.trampcr.com/2016/05/18/AndroidStudio中文文件路径框框问题/index.html">
+<meta property="og:title" content="反转句子中单词的顺序，不改变单词内字符的顺序">
+<meta property="og:url" content="http://www.trampcr.com/2016/06/23/反转单词字符串不改变单词内部顺序/index.html">
 <meta property="og:site_name" content="trampcr">
-<meta property="og:description" content="其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模">
-<meta property="og:image" content="http://7xslff.com1.z0.glb.clouddn.com/Open_File.png">
-<meta property="og:image" content="http://7xslff.com1.z0.glb.clouddn.com/AS_appearance_default_fonts.png">
-<meta property="og:updated_time" content="2016-05-18T05:34:04.148Z">
+<meta property="og:description" content="题目：输入一个英文句子，反转句子中单词的顺序，但单词内字符的顺序不变。句子中单词以空格隔开，为简单起见，标点符号和普通字母一样处理。
+输入：”I am a student.”
+输出：”student. a am I”
+
+思路：先反转整个句子中的所有字符，再反转每个单词中的字符。以上面的输入为例：先将”I am a student.”中所有字符反转，成为”.tneduts a ma I”，再将”.">
+<meta property="og:updated_time" content="2016-06-23T12:40:44.044Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决AndroidStudio读取中文文件路径时的乱码问题">
-<meta name="twitter:description" content="其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模">
-<meta name="twitter:image" content="http://7xslff.com1.z0.glb.clouddn.com/Open_File.png">
+<meta name="twitter:title" content="反转句子中单词的顺序，不改变单词内字符的顺序">
+<meta name="twitter:description" content="题目：输入一个英文句子，反转句子中单词的顺序，但单词内字符的顺序不变。句子中单词以空格隔开，为简单起见，标点符号和普通字母一样处理。
+输入：”I am a student.”
+输出：”student. a am I”
+
+思路：先反转整个句子中的所有字符，再反转每个单词中的字符。以上面的输入为例：先将”I am a student.”中所有字符反转，成为”.tneduts a ma I”，再将”.">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -198,11 +207,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-AndroidStudio中文文件路径框框问题" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-反转单词字符串不改变单词内部顺序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/05/18/AndroidStudio中文文件路径框框问题/" class="article-date">
-  	<time datetime="2016-05-18T05:25:05.638Z" itemprop="datePublished">2016-05-18</time>
+      <a href="/2016/06/23/反转单词字符串不改变单词内部顺序/" class="article-date">
+  	<time datetime="2016-06-23T12:38:45.260Z" itemprop="datePublished">2016-06-23</time>
 </a>
     </div>
   
@@ -215,7 +224,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      解决AndroidStudio读取中文文件路径时的乱码问题
+      反转句子中单词的顺序，不改变单词内字符的顺序
     </h1>
   
 
@@ -232,23 +241,13 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>其实这个问题从我开始使用AndroidStudio时就存在，但并没有影响我正常工作，只能是促使我在新建文件夹时都以英文命名，但是就在昨天，当我安装Skykai521写的一个AndroidStudio的翻译插件时，这个问题彻底暴露出来了，翻译出来的汉字全部为框框，不解决不行了。也不知道是google的方法不对，还是google中没有人遇到这么低级的问题，我抱着试一下的态度百度了一下，竟然有和我一模一样的问题，但是没人回答，最后在CSDN上找到了答案。</p>
+<p>题目：输入一个英文句子，反转句子中单词的顺序，但单词内字符的顺序不变。句子中单词以空格隔开，为简单起见，标点符号和普通字母一样处理。</p>
+<p>输入：”I am a student.”</p>
+<p>输出：”student. a am I”</p>
 </blockquote>
-<h3 id="AndroidStudio读取中文文件路径时的乱码问题"><a href="#AndroidStudio读取中文文件路径时的乱码问题" class="headerlink" title="AndroidStudio读取中文文件路径时的乱码问题"></a>AndroidStudio读取中文文件路径时的乱码问题</h3><p>直接上图：</p>
-<p><img src="http://7xslff.com1.z0.glb.clouddn.com/Open_File.png" alt=""></p>
-<p>图中的360口口口口口本来应该是360安全浏览器下载。这个还可以忍受，大不了去原文件目录看一下，但是装了翻译插件后，翻译出来的是一堆口，就没办法忍了。</p>
-<p>先说一下导致这个问题的原因：AndroidStudio中有两类字体，一类是AndroidStudio UI，即AndroidStudio界面上的所有文字的字体，例如工具栏上文字的字体；另一类是代码的字体。AndroidStudio读取中文文件路径时出现乱码，或者翻译出现乱码，这都是和AndroidStudio界面相关的，与程序代码并没有关系，需要修改AndroidStudio UI字体为支持中文的字体。我之前用的是Lucida Console，改为Arial Unicode MS或者其他支持中文的字体即可。</p>
-<p><strong>解决办法：</strong></p>
-<p>在Settings-&gt;Appearance-&gt;UI options-&gt;Override default fonts by下的Name中将Lucida Console改为Arial Unicode MS。如下图：</p>
-<p><img src="http://7xslff.com1.z0.glb.clouddn.com/AS_appearance_default_fonts.png" alt=""></p>
-<hr>
-<blockquote>
-<p>问题解决完了，再推荐一下引起我解决这个问题的翻译插件，尤其是对于阅读源码的同学来说，遇到不懂的单词，避免了先复制再切换到字典进行翻译，方便快捷。</p>
-</blockquote>
-<p>AndroidStudio翻译插件地址：<a href="https://github.com/Skykai521/ECTranslation" target="_blank" rel="external">https://github.com/Skykai521/ECTranslation</a></p>
-<p><strong>具体使用方法，看作者README</strong></p>
-<p>参考文章：<a href="http://blog.csdn.net/whuancai/article/details/8935519" target="_blank" rel="external">Android Studio设置主题和不支持中文的问题解决方法</a></p>
-
+<p><strong>思路：先反转整个句子中的所有字符，再反转每个单词中的字符。以上面的输入为例：先将”I am a student.”中所有字符反转，成为”.tneduts a ma I”，再将”.tneduts a ma I”中的每个单词进行反转，得到最终结果：”student. a am I”。</strong></p>
+<p>Java代码实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReverseStr</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">while</span> (sc.hasNext()) &#123;</span><br><span class="line">			String str = sc.nextLine();</span><br><span class="line">			String reserveAll = <span class="string">""</span>;</span><br><span class="line">			String result = <span class="string">""</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = str.length() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">				reserveAll += str.charAt(i);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(reserveAll);</span><br><span class="line">			<span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">int</span> end = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span> (start &lt; reserveAll.length() &amp;&amp; end &lt;= reserveAll.length()) &#123;</span><br><span class="line">				<span class="keyword">if</span> (reserveAll.charAt(start) == <span class="string">' '</span>) &#123;</span><br><span class="line">					result += reserveAll.charAt(start);</span><br><span class="line">					start++;</span><br><span class="line">					end++;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (end == reserveAll.length() || reserveAll.charAt(end) == <span class="string">' '</span>) &#123;</span><br><span class="line">					<span class="keyword">for</span> (<span class="keyword">int</span> i = end - <span class="number">1</span>; i &gt;= start; i--) &#123;</span><br><span class="line">						result += reserveAll.charAt(i);</span><br><span class="line">					&#125;</span><br><span class="line">					start = end;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					end++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(result);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -257,18 +256,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          如何把文件夹中文件的文件名导入excel表格或txt文本
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/16/Android备份短信/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Android短信备份</div>
+    <a href="/2016/06/23/面试中的排序算法/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试中的排序算法</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -303,7 +293,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="AndroidStudio中文文件路径框框问题" data-title="解决AndroidStudio读取中文文件路径时的乱码问题" data-url="http://www.trampcr.com/2016/05/18/AndroidStudio中文文件路径框框问题/"></div>
+	<div class="ds-thread" data-thread-key="反转单词字符串不改变单词内部顺序" data-title="反转句子中单词的顺序，不改变单词内字符的顺序" data-url="http://www.trampcr.com/2016/06/23/反转单词字符串不改变单词内部顺序/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

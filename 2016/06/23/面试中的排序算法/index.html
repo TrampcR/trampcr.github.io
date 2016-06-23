@@ -4,17 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/6 | trampcr</title>
+  <title>面试中的排序算法 | trampcr</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="�ʼ� �ܽ� ����">
-<meta property="og:type" content="website">
-<meta property="og:title" content="trampcr">
-<meta property="og:url" content="http://www.trampcr.com/archives/2016/06/index.html">
+  <meta name="description" content="在介绍具体排序算法之前，有必要先解释一下算法稳定性的概念以及排序算法的简单分类。
+
+算法的稳定性：如果待排序表中有两个元素Ri和Rj，其对应的关键字keyi=keyj，且在排序前Ri在Rj前面，如果使用某一排序算法后，Ri仍然在Rj的前面，则称这个排序算法是稳定的，否则称排序算法是不稳定的。
+排序算法的简单分类
+在排序的过程中，根据数据元素是否完全在内存中，可将排序算法分为两类：内部排序和外部排">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试中的排序算法">
+<meta property="og:url" content="http://www.trampcr.com/2016/06/23/面试中的排序算法/index.html">
 <meta property="og:site_name" content="trampcr">
-<meta property="og:description" content="�ʼ� �ܽ� ����">
+<meta property="og:description" content="在介绍具体排序算法之前，有必要先解释一下算法稳定性的概念以及排序算法的简单分类。
+
+算法的稳定性：如果待排序表中有两个元素Ri和Rj，其对应的关键字keyi=keyj，且在排序前Ri在Rj前面，如果使用某一排序算法后，Ri仍然在Rj的前面，则称这个排序算法是稳定的，否则称排序算法是不稳定的。
+排序算法的简单分类
+在排序的过程中，根据数据元素是否完全在内存中，可将排序算法分为两类：内部排序和外部排">
+<meta property="og:updated_time" content="2016-06-22T15:08:54.519Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="trampcr">
-<meta name="twitter:description" content="�ʼ� �ܽ� ����">
+<meta name="twitter:title" content="面试中的排序算法">
+<meta name="twitter:description" content="在介绍具体排序算法之前，有必要先解释一下算法稳定性的概念以及排序算法的简单分类。
+
+算法的稳定性：如果待排序表中有两个元素Ri和Rj，其对应的关键字keyi=keyj，且在排序前Ri在Rj前面，如果使用某一排序算法后，Ri仍然在Rj的前面，则称这个排序算法是稳定的，否则称排序算法是不稳定的。
+排序算法的简单分类
+在排序的过程中，根据数据元素是否完全在内存中，可将排序算法分为两类：内部排序和外部排">
   
   
     <link rel="icon" href="/img/favicon.ico">
@@ -194,68 +207,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-反转单词字符串不改变单词内部顺序" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/23/反转单词字符串不改变单词内部顺序/" class="article-date">
-  	<time datetime="2016-06-23T12:38:45.260Z" itemprop="datePublished">2016-06-23</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/23/反转单词字符串不改变单词内部顺序/">反转句子中单词的顺序，不改变单词内字符的顺序</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>题目：输入一个英文句子，反转句子中单词的顺序，但单词内字符的顺序不变。句子中单词以空格隔开，为简单起见，标点符号和普通字母一样处理。</p>
-<p>输入：”I am a student.”</p>
-<p>输出：”student. a am I”</p>
-</blockquote>
-<p><strong>思路：先反转整个句子中的所有字符，再反转每个单词中的字符。以上面的输入为例：先将”I am a student.”中所有字符反转，成为”.tneduts a ma I”，再将”.tneduts a ma I”中的每个单词进行反转，得到最终结果：”student. a am I”。</strong></p>
-<p>Java代码实现</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReverseStr</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">while</span> (sc.hasNext()) &#123;</span><br><span class="line">			String str = sc.nextLine();</span><br><span class="line">			String reserveAll = <span class="string">""</span>;</span><br><span class="line">			String result = <span class="string">""</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = str.length() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line">				reserveAll += str.charAt(i);</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(reserveAll);</span><br><span class="line">			<span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">int</span> end = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span> (start &lt; reserveAll.length() &amp;&amp; end &lt;= reserveAll.length()) &#123;</span><br><span class="line">				<span class="keyword">if</span> (reserveAll.charAt(start) == <span class="string">' '</span>) &#123;</span><br><span class="line">					result += reserveAll.charAt(start);</span><br><span class="line">					start++;</span><br><span class="line">					end++;</span><br><span class="line">				&#125;<span class="keyword">else</span> <span class="keyword">if</span> (end == reserveAll.length() || reserveAll.charAt(end) == <span class="string">' '</span>) &#123;</span><br><span class="line">					<span class="keyword">for</span> (<span class="keyword">int</span> i = end - <span class="number">1</span>; i &gt;= start; i--) &#123;</span><br><span class="line">						result += reserveAll.charAt(i);</span><br><span class="line">					&#125;</span><br><span class="line">					start = end;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					end++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println(result);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-面试中的排序算法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-面试中的排序算法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/06/23/面试中的排序算法/" class="article-date">
@@ -271,12 +223,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/23/面试中的排序算法/">面试中的排序算法</a>
+    <h1 class="article-title" itemprop="name">
+      面试中的排序算法
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -414,104 +373,77 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-将文件夹中的文件名导入excel表格或txt文本" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/" class="article-date">
-  	<time datetime="2016-06-05T14:43:33.162Z" itemprop="datePublished">2016-06-05</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+<nav id="article-nav">
+  
+    <a href="/2016/06/23/反转单词字符串不改变单词内部顺序/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
         
+          反转句子中单词的顺序，不改变单词内字符的顺序
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/">如何把文件夹中文件的文件名导入excel表格或txt文本</a>
-    </h1>
   
+    <a href="/2016/06/05/将文件夹中的文件名导入excel表格或txt文本/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">如何把文件夹中文件的文件名导入excel表格或txt文本</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>再简单的知识都需要记录，因为好记性不如烂笔头。</p>
-</blockquote>
-<p>把文件夹中文件的文件名导入excel表格或txt文本有两种方法：</p>
-<ul>
-<li>命令行输入相应的命令</li>
-<li>人生苦短，我用Python</li>
-</ul>
-<p>接下来详细说一下这两种方法</p>
-<h3 id="1-命令行"><a href="#1-命令行" class="headerlink" title="1.命令行"></a>1.命令行</h3><p>在命令行中输入相应的命令也有两种形式，如下：</p>
-<ul>
-<li>dir [文件夹路径] /b &gt; [excel表格或txt文本想保存的路径\excel表格或txt文本文件名]（这种形式不需要进入目标文件夹下）</li>
-<li>dir /b &gt; [excel表格或txt文本想保存的路径\excel表格或txt文本文件名]（这种形式有一个前提，需要先进入目标文件夹下）</li>
-</ul>
-<p>有点抽象，看图：</p>
-<p><img src="http://7xslff.com1.z0.glb.clouddn.com/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%AC%E4%B8%80%E7%A7%8D%E5%BD%A2%E5%BC%8F.png" alt=""></p>
-<p><img src="http://7xslff.com1.z0.glb.clouddn.com/%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%AC%AC%E4%BA%8C%E7%A7%8D%E5%BD%A2%E5%BC%8F.png" alt=""></p>
-<p>以上两种形式任选一种即可，进入目标文件夹，可以看到相应的excel表格和txt文本已经生成了，如下：</p>
-<p><img src="http://7xslff.com1.z0.glb.clouddn.com/excelAndtxt.png" alt=""></p>
-<h3 id="2-Python脚本"><a href="#2-Python脚本" class="headerlink" title="2.Python脚本"></a>2.Python脚本</h3><p>Python对于处理文本来说，很简单的代码就可以搞定。</p>
-<p>代码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os,sys</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">listdir</span><span class="params">(dir,file)</span>:</span></span><br><span class="line">    fielnum = <span class="number">0</span>  <span class="comment">#统计文件的个数，如果需要的话，在后边可以打印出来</span></span><br><span class="line">    list = os.listdir(dir)  <span class="comment">#列出目录下的所有文件和目录</span></span><br><span class="line">    <span class="keyword">for</span> line <span class="keyword">in</span> list:</span><br><span class="line">        filepath = os.path.join(dir,line)</span><br><span class="line">        <span class="keyword">if</span> os.path.isdir(filepath):  <span class="comment">#如果filepath是目录，则再列出该目录下的所有文件</span></span><br><span class="line">            myfile.write(<span class="string">'   '</span> + line + <span class="string">'//'</span>+<span class="string">'\n'</span>)</span><br><span class="line">            <span class="keyword">for</span> li <span class="keyword">in</span> os.listdir(filepath):</span><br><span class="line">                myfile.write(<span class="string">'     '</span>+li + <span class="string">'\n'</span>)</span><br><span class="line">                fielnum = fielnum + <span class="number">1</span></span><br><span class="line">        <span class="keyword">elif</span> os.path:   <span class="comment">#如果filepath是文件，直接列出文件名</span></span><br><span class="line">            myfile.write(line + <span class="string">'\n'</span>)</span><br><span class="line">            fielnum = fielnum + <span class="number">1</span></span><br><span class="line">dir = raw_input(<span class="string">'please input the path:'</span>)</span><br><span class="line">myfile = open(<span class="string">'list.txt'</span>,<span class="string">'w'</span>)</span><br><span class="line">listdir(dir,myfile)</span><br><span class="line">myfile.close()</span><br></pre></td></tr></table></figure>
-<p>这里输入目标文件夹，即可将目标文件夹中的文件名写入list.txt中，如果想保存为excel表格形式，将list.txt改为list.xls。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
 
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="面试中的排序算法" data-title="面试中的排序算法" data-url="http://www.trampcr.com/2016/06/23/面试中的排序算法/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
-  
-  
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
@@ -536,8 +468,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
